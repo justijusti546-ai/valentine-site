@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Forever With Srinithya 💍</title>
+
+<style>
+    body{
+        background-color: palevioletred;
+    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin-top: 30px;
+    font-size: 40px;
+}
+
+.slideshow-container {
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.fade {
+    animation: fadeEffect 2s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.heart {
+    font-size: 60px;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: pink;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Ring Animation */
+.ring-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ring {
+    font-size: 120px;
+    animation: zoomIn 2s ease forwards;
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.sparkle {
+    position: absolute;
+    font-size: 20px;
+    animation: sparkleAnim 2s infinite;
+}
+
+@keyframes sparkleAnim {
+    0% { opacity: 0; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(-20px); }
+    100% { opacity: 0; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+    <source src="metro.mp3" type="audio/mpeg">
+</audio>
+
+<h1>Happy Valentine's Day Srinithya 💕</h1>
+<div class="heart">❤️</div>
+
+
+
+</div>
+
+<h2>Every moment with you is my favourite memory 💖</h2>
+
+<button onclick="showRing()">Click Here My Love 💌</button>
+
+<div class="ring-container" id="ringBox">
+    <div class="ring">💍</div>
+    <h1>Will You Marry Me Srinithya? 💖</h1>
+    <p style="font-size:22px;">I promise to love you forever ❤️</p>
+    <div class="sparkle" style="top:40%; left:45%;">✨</div>
+    <div class="sparkle" style="top:50%; left:55%;">✨</div>
+    <div class="sparkle" style="top:60%; left:48%;">✨</div>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 3000);
+}
+
+function showRing() {
+    document.getElementById("ringBox").style.display = "flex";
+}
+</script>
+
+</body>
+</html>
